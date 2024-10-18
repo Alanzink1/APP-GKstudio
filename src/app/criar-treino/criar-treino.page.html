@@ -1,0 +1,45 @@
+<ion-header>
+  <div class="cor ion-text-end">
+      <ion-title style="color: black; text-align: end;">
+        GK Studio
+      </ion-title>
+      <img class="logo-header" src="assets/icon/logogk 2.png" alt="">
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    
+  <ion-row style="margin-top: 50px;">
+    <ion-col>
+      <ion-label>Titulo *</ion-label>
+      <ion-input type="text" class="input"  fill="outline"></ion-input>
+      <br/>
+      <ion-row>
+        <ion-col>
+          <ion-label>Data *</ion-label>
+          <ion-input  type="date" class="input" fill="outline"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-label>Horário *</ion-label>
+          <ion-input  type="time" class="input" fill="outline"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-label>Foco do Treino:</ion-label>
+      <ion-textarea style="height: 250px;" class="input" fill="outline"></ion-textarea>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-text-center">
+    <ion-col>
+      <button class="custom-button">Confirmar Treino</button>
+    </ion-col>
+  </ion-row>
+  
+
+</ion-content>

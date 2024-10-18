@@ -1,0 +1,7 @@
+{
+  "name": "gkstudio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

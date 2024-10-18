@@ -1,0 +1,69 @@
+.logo-header{
+    width: 70px;
+  }
+  
+  .alinhamento{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .adicionar{
+    margin: 5px;
+    border-radius: 5px;
+    height: 150px;
+    width: auto ;
+    background-color: #4E905C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .cor{
+    background-color: #4E905C;
+  }
+  
+  .cor-body{
+    background-color: white;
+  }
+  
+  
+  .container {
+    display: flex;
+    height: auto; /* Altura total da tela */
+    gap: 20px;
+    background-color: white;
+    margin: 20px 10px 20px 0px;
+    
+  }
+  
+  .side-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinhamento vertical */
+    align-items: center; /* Alinhamento horizontal */
+    flex: 0 0 15%; /* Largura fixa para a div lateral */
+    background-color: #C0BABA;
+    color: #000;
+    writing-mode: vertical;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .main-div {
+    flex: 1; /* Ocupa o restante do espaço */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .top-div, .bottom-div, .bottom-div-1 {
+    flex: 1;
+    background-color: #C0BABA;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
