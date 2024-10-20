@@ -1,39 +1,33 @@
-<ion-header>
-  <div class="cor ion-text-end">
-      <ion-title style="color: black; text-align: end;">
-        GK Studio
-      </ion-title>
-      <img class="logo-header" src="assets/icon/logogk 2.png" alt="">
-  </div>
-</ion-header>
+<app-header></app-header>
 
 <ion-content [fullscreen]="true">
 
-    
+
   <ion-row style="margin-top: 50px;">
     <ion-col>
-      <ion-label>Nome *</ion-label>
-      <ion-input type="text" class="input"  fill="outline" [(ngModel)]="this.professor.nome"></ion-input>
-      <br/>
+      <ion-label>Nome Aula *</ion-label>
+      <ion-input type="text" class="input" fill="outline" [(ngModel)]="this.professor.nome"></ion-input>
+      <br />
       <ion-label>Professor *</ion-label>
-      <ion-input type="text" class="input"  fill="outline" [(ngModel)]="this.professor.professor"></ion-input>
+      <ion-input type="text" class="input" fill="outline" [(ngModel)]="this.professor.professor"></ion-input>
       <ion-row>
-        <ion-col>
+        <ion-col size="6">
           <ion-label>Data *</ion-label>
-          <ion-input  type="date" class="input" fill="outline" [(ngModel)]="this.professor.data"></ion-input>
+          <ion-input type="date" class="input" fill="outline" [(ngModel)]="this.professor.data"></ion-input>
         </ion-col>
-        <ion-col>
-          <ion-label>Horário Inicio*</ion-label>
-          <ion-input  type="time" class="input" fill="outline" [(ngModel)]="this.professor.hora_inicio"></ion-input>
-        </ion-col>
-        <ion-col>
-          <ion-label>Horário Fim*</ion-label>
-          <ion-input  type="time" class="input" fill="outline" [(ngModel)]="this.professor.hora_fim"></ion-input>
-        </ion-col>
-        <ion-col>
+        <ion-col size="6">
           <ion-label>Qtd Alunos*</ion-label>
-          <ion-input  type="number" class="input" fill="outline" min="0" [(ngModel)]="this.professor.qtd"></ion-input>
+          <ion-input type="number" class="input" fill="outline" min="0" [(ngModel)]="this.professor.qtd"></ion-input>
         </ion-col>
+        <ion-col>
+          <ion-label>Hora De Inicio*</ion-label>
+          <ion-input type="time" class="input" fill="outline" [(ngModel)]="this.professor.hora_inicio"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-label>Hora De Fim</ion-label>
+          <ion-input type="time" class="input" fill="outline" [(ngModel)]="this.professor.hora_fim"></ion-input>
+        </ion-col>
+
       </ion-row>
     </ion-col>
   </ion-row>
@@ -45,11 +39,43 @@
     </ion-col>
   </ion-row>
 
+  <ion-row>
+    <ion-col class="ion-text-center" style="display: flex; justify-content: center;">
+      <ion-button id="open-modal" expand="block"
+        style=" height: 50px; border-radius: 5px; width:50%; padding: 10px; color: black;">
+        Selecionar alunos
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-header class="ion-text-center" style="background-color: #4E905C;">
+          <ion-title slot="center">Selecione o(a)s Alunos(as)</ion-title>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-list style="background-color: white; color: black;">
+          <span>Rodrigo</span> <br>
+          <span>Bianca</span><br>
+          <span>Luis</span>
+        </ion-list>
+        <div class="container-button">
+          <ion-button (click)="cancel()">Cancel</ion-button>
+          <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+
+
+
+
+
   <ion-row class="ion-text-center">
     <ion-col>
       <button (click)="salvar()" class="custom-button">Confirmar Treino</button>
     </ion-col>
   </ion-row>
-  
+
 
 </ion-content>

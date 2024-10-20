@@ -26,7 +26,11 @@ const routes: Routes = [
   {
     path: 'cancelar',
     loadChildren: () => import('./cancelar/cancelar.module').then( m => m.CancelarPageModule)
+  },  {
+    path: 'loading',
+    loadChildren: () => import('./loading/loading.module').then( m => m.LoadingPageModule)
   },
+
 ];
 
 @NgModule({

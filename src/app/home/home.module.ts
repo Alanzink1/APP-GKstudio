@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
-
 import { HomePageRoutingModule } from './home-routing.module';
 import { RouterLink } from '@angular/router';
+import { HeaderModule } from '../shared/templates/header/header.module';
 
 
 @NgModule({
@@ -14,7 +14,8 @@ import { RouterLink } from '@angular/router';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    RouterLink
+    RouterLink,
+    HeaderModule
   ],
   declarations: [HomePage]
 })

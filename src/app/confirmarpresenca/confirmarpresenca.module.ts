@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ConfirmarpresencaPageRoutingModule } from './confirmarpresenca-routing.module';
 import { ConfirmarpresencaPage } from './confirmarpresenca.page';
+import { HeaderModule } from '../shared/templates/header/header.module';
 
 
 
@@ -13,7 +14,8 @@ import { ConfirmarpresencaPage } from './confirmarpresenca.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ConfirmarpresencaPageRoutingModule
+    ConfirmarpresencaPageRoutingModule,
+    HeaderModule
   ],
   declarations: [ConfirmarpresencaPage]
 })

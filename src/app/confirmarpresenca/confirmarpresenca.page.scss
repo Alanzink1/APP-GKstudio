@@ -1,6 +1,4 @@
-.logo-header{
-    width: 70px;
-  }
+
   
   .alinhamento{
     display: flex;
@@ -18,13 +16,8 @@
     align-items: center;
     justify-content: center;
   }
-  
-  
-  .cor{
-    background-color: #4E905C;
-  }
-  
-  .cor-body{
+
+    .cor-body{
     background-color: white;
   }
   
@@ -65,5 +58,12 @@
     color: black;
     padding: 20px;
     border-radius: 5px;
+  }
+  
+  .container-button {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+    gap: 10px; /* Espaço entre os itens */
   }
   

@@ -1,17 +1,4 @@
-<!-- <ion-header  collapse="fade">
-  <ion-title>Gkstudio
-    <img class="logo-header" src="assets/icon/logogk 2.png" alt="">
-  </ion-title>
-</ion-header> -->
-
-<ion-header>
-  <div class="cor ion-text-end">
-      <ion-title style="color: black; text-align: end;">
-        GK Studio
-      </ion-title>
-      <img class="logo-header" src="assets/icon/logogk 2.png" alt="">
-  </div>
-</ion-header>
+<app-header></app-header>
 
 
 
@@ -40,31 +27,16 @@
         <ion-row>
           <ion-col class="ion-text-center">
             <ion-button  id="open-modal" expand="block" style=" height: 50px; border-radius: 5px; width:50%; padding: 10px; color: black;">
-              alunos
+              Selecionar alunos
             </ion-button>
             <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
               <ng-template>
                 <ion-header>
                   <ion-toolbar>
-                    <ion-buttons slot="start">
-                      <ion-button (click)="cancel()">Cancel</ion-button>
-                    </ion-buttons>
-                    <ion-title>Welcome</ion-title>
-                    <ion-buttons slot="end">
-                      <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
-                    </ion-buttons>
+                    <ion-title slot="center">Alunos</ion-title>
                   </ion-toolbar>
                 </ion-header>
                 <ion-content class="ion-padding">
-                  <ion-item>
-                    <ion-input
-                      label="Enter your name"
-                      labelPlacement="stacked"
-                      type="text"
-                      placeholder="Your name"
-                      [(ngModel)]="name"
-                    ></ion-input>
-                  </ion-item>
                   <ion-list>
                     <!-- <ng-container *ngFor="let aluno of this.alunoService.alunos">
                       <ion-item (click)="convidar(aluno)">
@@ -74,6 +46,10 @@
                       </ion-item>
                     </ng-container> -->
                   </ion-list>
+                  <div class="container-button">
+                    <ion-button (click)="cancel()">Cancel</ion-button>
+                    <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+                  </div>
                 </ion-content>
               </ng-template>
             </ion-modal>
