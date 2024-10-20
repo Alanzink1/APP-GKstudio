@@ -39,9 +39,45 @@
         </ion-row>
         <ion-row>
           <ion-col class="ion-text-center">
-            <button style="background-color: #4E905C; height: 50px; border-radius: 5px; width:50%; padding: 10px; color: black;">
+            <ion-button  id="open-modal" expand="block" style=" height: 50px; border-radius: 5px; width:50%; padding: 10px; color: black;">
               alunos
-            </button>
+            </ion-button>
+            <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <ion-buttons slot="start">
+                      <ion-button (click)="cancel()">Cancel</ion-button>
+                    </ion-buttons>
+                    <ion-title>Welcome</ion-title>
+                    <ion-buttons slot="end">
+                      <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+                    </ion-buttons>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <ion-item>
+                    <ion-input
+                      label="Enter your name"
+                      labelPlacement="stacked"
+                      type="text"
+                      placeholder="Your name"
+                      [(ngModel)]="name"
+                    ></ion-input>
+                  </ion-item>
+                  <ion-list>
+                    <!-- <ng-container *ngFor="let aluno of this.alunoService.alunos">
+                      <ion-item (click)="convidar(aluno)">
+                        <ion-label>
+                          {{aluno.nome}}
+                        </ion-label>
+                      </ion-item>
+                    </ng-container> -->
+                  </ion-list>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+
           </ion-col>
         </ion-row>
       </div>

@@ -12,17 +12,27 @@
     
   <ion-row style="margin-top: 50px;">
     <ion-col>
-      <ion-label>Titulo *</ion-label>
-      <ion-input type="text" class="input"  fill="outline"></ion-input>
+      <ion-label>Nome *</ion-label>
+      <ion-input type="text" class="input"  fill="outline" [(ngModel)]="this.professor.nome"></ion-input>
       <br/>
+      <ion-label>Professor *</ion-label>
+      <ion-input type="text" class="input"  fill="outline" [(ngModel)]="this.professor.professor"></ion-input>
       <ion-row>
         <ion-col>
           <ion-label>Data *</ion-label>
-          <ion-input  type="date" class="input" fill="outline"></ion-input>
+          <ion-input  type="date" class="input" fill="outline" [(ngModel)]="this.professor.data"></ion-input>
         </ion-col>
         <ion-col>
-          <ion-label>Horário *</ion-label>
-          <ion-input  type="time" class="input" fill="outline"></ion-input>
+          <ion-label>Horário Inicio*</ion-label>
+          <ion-input  type="time" class="input" fill="outline" [(ngModel)]="this.professor.hora_inicio"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-label>Horário Fim*</ion-label>
+          <ion-input  type="time" class="input" fill="outline" [(ngModel)]="this.professor.hora_fim"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-label>Qtd Alunos*</ion-label>
+          <ion-input  type="number" class="input" fill="outline" min="0" [(ngModel)]="this.professor.qtd"></ion-input>
         </ion-col>
       </ion-row>
     </ion-col>
@@ -37,7 +47,7 @@
 
   <ion-row class="ion-text-center">
     <ion-col>
-      <button class="custom-button">Confirmar Treino</button>
+      <button (click)="salvar()" class="custom-button">Confirmar Treino</button>
     </ion-col>
   </ion-row>
   

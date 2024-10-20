@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CriarTreinoPage } from './criar-treino.page';
 
+
 describe('CriarTreinoPage', () => {
   let component: CriarTreinoPage;
   let fixture: ComponentFixture<CriarTreinoPage>;
@@ -15,3 +16,7 @@ describe('CriarTreinoPage', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
+
+
