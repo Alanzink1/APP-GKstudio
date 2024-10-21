@@ -3,15 +3,32 @@ import { AulaService } from '../shared/services/aula.service';
 import { IonModal } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 
+interface Aluno {
+  nome: string;
+  selecionado: boolean;
+}
 
 @Component({
   selector: 'app-criar-treino',
   templateUrl: './criar-treino.page.html',
   styleUrls: ['./criar-treino.page.scss'],
 })
+
 export class CriarTreinoPage implements OnInit {
   @ViewChild(IonModal) modal!: IonModal;
 
+ 
+ 
+  alunos: Aluno[] = [
+    { nome: 'Rodrigo', selecionado: false },
+    { nome: 'Bianca', selecionado: false },
+    { nome: 'Luis', selecionado: false },
+  ];
+ 
+ 
+ 
+
+ 
   professor={ 
     id: null, 
     nome: null, 
@@ -42,6 +59,9 @@ export class CriarTreinoPage implements OnInit {
   async confirm() {
     await this.dismissModal();
     console.log('Confirm button clicked');
+
+    const selecionados = this.alunos.filter(aluno => aluno.selecionado);
+    console.log('Alunos selecionados:', selecionados);
   }
 
   async dismissModal() {

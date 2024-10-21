@@ -41,34 +41,33 @@
 
   <ion-row>
     <ion-col class="ion-text-center" style="display: flex; justify-content: center;">
-      <ion-button id="open-modal" expand="block"
-        style=" height: 50px; border-radius: 5px; width:50%; padding: 10px; color: black;">
+      <ion-button id="open-modal" expand="block" style="height: 50px; border-radius: 5px; width:50%; padding: 10px; color: black;">
         Selecionar alunos
       </ion-button>
     </ion-col>
   </ion-row>
+  
   <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
     <ng-template>
-      <ion-header class="ion-text-center" style="background-color: #4E905C;">
-          <ion-title slot="center">Selecione o(a)s Alunos(as)</ion-title>
+      <ion-header class="ion-text-center" style="background-color: #4E905C;  margin-top:20px;">
+        <ion-title slot="center">Selecione o(a)s Alunos(as)</ion-title>
       </ion-header>
+      
       <ion-content class="ion-padding">
         <ion-list style="background-color: white; color: black;">
-          <span>Rodrigo</span> <br>
-          <span>Bianca</span><br>
-          <span>Luis</span>
+          <ion-item *ngFor="let aluno of alunos">
+            <ion-label>{{ aluno.nome }}</ion-label>
+            <ion-checkbox [(ngModel)]="aluno.selecionado"></ion-checkbox>
+          </ion-item>
         </ion-list>
-        <div class="container-button">
-          <ion-button (click)="cancel()">Cancel</ion-button>
-          <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+  
+        <div class="container-button" style="display: flex; justify-content: space-between; margin-top: 20px;">
+          <ion-button (click)="cancel()">Cancelar</ion-button>
+          <ion-button (click)="confirm()" [strong]="true">Confirmar</ion-button>
         </div>
       </ion-content>
     </ng-template>
   </ion-modal>
-
-
-
-
 
 
   <ion-row class="ion-text-center">

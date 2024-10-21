@@ -30,40 +30,99 @@ ion-fab {
 }
 
 
+// .container {
+//   display: flex;
+//   height: auto; /* Altura total da tela */
+//   gap: 20px;
+//   background-color: white;
+//   margin: 20px 0px 20px 0px;
+  
+// }
+
+// .side-div {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center; /* Alinhamento vertical */
+//   align-items: center; /* Alinhamento horizontal */
+//   flex: 0 0 15%; /* Largura fixa para a div lateral */
+//   background-color: #F2EDED;
+//   color: #000;
+//   writing-mode: vertical;
+//   text-align: center;
+//   padding: 20px;
+//   border-radius: 5px;
+// }
+
+// .main-div {
+//   flex: 1; /* Ocupa o restante do espaço */
+//   display: flex;
+//   flex-direction: column;
+//   gap: 20px;
+// }
+
+// .top-div, .bottom-div, .bottom-div-1 {
+//   flex: 1;
+//   background-color: #F2EDED;
+//   color: black;
+//   padding: 20px;
+//   border-radius: 5px;
+// }
+
+// ======================================================================================
+
+// .container {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .main-div {
+//   display: flex;
+//   align-items: flex-start; /* Alinha os itens no topo */
+//   margin-bottom: 20px; /* Espaço entre os grupos de atividades */
+// }
+
+// .side-div {
+//   width: 200px; /* Largura fixa para o aside */
+//   margin-right: 20px; /* Espaço entre o aside e as atividades */
+//   height: 100%;
+//   background-color: #F2EDED;
+// }
+
+// .atividade-container {
+//   flex: 1; /* Ocupa o restante do espaço disponível */
+// }
+
+// .atividade-div {
+//   margin-bottom: 10px; /* Espaço entre as atividades */
+// }
+
+// ======================================================================
 .container {
   display: flex;
-  height: auto; /* Altura total da tela */
-  gap: 20px;
-  background-color: white;
-  margin: 20px 0px 20px 0px;
-  
-}
-
-.side-div {
-  display: flex;
   flex-direction: column;
-  justify-content: center; /* Alinhamento vertical */
-  align-items: center; /* Alinhamento horizontal */
-  flex: 0 0 15%; /* Largura fixa para a div lateral */
-  background-color: #F2EDED;
-  color: #000;
-  writing-mode: vertical;
-  text-align: center;
-  padding: 20px;
-  border-radius: 5px;
 }
 
 .main-div {
-  flex: 1; /* Ocupa o restante do espaço */
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  align-items: stretch; /* Faz com que o aside e o container de atividades tenham a mesma altura */
+  margin-bottom: 20px; /* Espaço entre os grupos de atividades */
+  gap:5px;
 }
 
-.top-div, .bottom-div, .bottom-div-1 {
-  flex: 1;
-  background-color: #F2EDED;
-  color: black;
-  padding: 20px;
-  border-radius: 5px;
+.side-div {
+  width: 150px; /* Largura fixa para o aside */
+  background-color: #f0f0f0; /* Para visualização, pode ajustar conforme necessário */
+  padding: 10px; /* Espaçamento interno */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.atividade-container {
+  flex: 1; /* Ocupa o restante do espaço disponível */
+}
+
+.atividade-div {
+  margin-bottom: 10px; /* Espaço entre as atividades */
+  background-color: #f0f0f0; 
 }

@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 
-<ion-content class="cor-body" [fullscreen]="true">
+<!-- <ion-content class="cor-body" [fullscreen]="true">
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>
@@ -169,4 +169,44 @@
 
 
 
+</ion-content> -->
+
+<ion-content>
+
+  <div class="titulo-atividade" style="margin: 10px 0px; text-align: center;">
+    <h1>Atividades</h1>
+  </div>
+
+  <div class="container">
+    <div *ngFor="let dataAtividade of atividades" class="main-div">
+      <aside class="side-div">
+        <!-- <span>{{ dataAtividade.data | date: 'fullDate' }}</span> -->
+        <span>{{ dataAtividade.data |  date: 'MMM d'}}</span>
+      </aside>
+      <div class="atividade-container">
+        <div *ngFor="let atividade of dataAtividade.atividades" class="atividade-div">
+          <div class="top-div">
+            <ion-row>
+              <ion-col>
+                <h1>{{ atividade.titulo }}</h1>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="alinhamento">
+                <img style="width: 40px;" src="assets/icon/icon persons.png" alt="">
+                <span>{{ atividade.participantes }}</span>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="ion-text-end">
+                <button style="background-color: #4E905C; height: 50px; border-radius: 5px; width:auto; padding: 10px; color: black;">
+                  Confirmar Presença
+                </button>
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>
