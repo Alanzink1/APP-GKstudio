@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'loading',
     loadChildren: () => import('./loading/loading.module').then( m => m.LoadingPageModule)
   },
+  {
+    path: 'cadastrar-se',
+    loadChildren: () => import('./cadastrar-se/cadastrar-se.module').then( m => m.CadastrarSePageModule)
+  },
 
 ];
 

@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
-import { CancelarPageRoutingModule } from './cancelar-routing.module';
-
-import { CancelarPage } from './cancelar.page';
+import { CadastrarSePageRoutingModule } from './cadastrar-se-routing.module';
+import { CadastrarSePage } from './cadastrar-se.page';
 import { HeaderModule } from '../shared/templates/header/header.module';
 
 @NgModule({
@@ -14,9 +11,9 @@ import { HeaderModule } from '../shared/templates/header/header.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    CancelarPageRoutingModule,
+    CadastrarSePageRoutingModule,
     HeaderModule
   ],
-  declarations: [CancelarPage]
+  declarations: [CadastrarSePage]
 })
-export class CancelarPageModule {}
+export class CadastrarSePageModule {}
